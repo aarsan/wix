@@ -16,18 +16,18 @@
           <Directory Id='INSTALLDIR' Name='CityCorner 1.0'>
 
             <Component Id='MainExecutable' Guid='84dcf5c4-8ab2-497f-8f22-924aa568da78'>
-              <File Id='FoobarEXE' Name='citycorner.exe' DiskId='1' Source='citycorner.exe' KeyPath='yes'>
-                <Shortcut Id="startmenuFoobar10" Directory="ProgramMenuDir" Name="CityCorner 1.0" WorkingDirectory='INSTALLDIR' Icon="Foobar10.exe" IconIndex="0" Advertise="yes" />
-                <Shortcut Id="desktopFoobar10" Directory="DesktopFolder" Name="CityCorner 1.0" WorkingDirectory='INSTALLDIR' Icon="Foobar10.exe" IconIndex="0" Advertise="yes" />
+              <File Id='FoobarEXE' Name='citycorner.exe' DiskId='1' Source='media\citycorner.exe' KeyPath='yes'>
+                <Shortcut Id="startmenuFoobar10" Directory="ProgramMenuDir" Name="CityCorner 1.0" WorkingDirectory='INSTALLDIR' Icon="CityCorner.exe" IconIndex="0" Advertise="yes" />
+                <Shortcut Id="desktopFoobar10" Directory="DesktopFolder" Name="CityCorner 1.0" WorkingDirectory='INSTALLDIR' Icon="CityCorner.exe" IconIndex="0" Advertise="yes" />
               </File>
             </Component>
 
             <Component Id='HelperLibrary' Guid='615d4f06-3562-4237-a79a-a103d7b001e0'>
-              <File Id='HelperDLL' Name='Helper.dll' DiskId='1' Source='Helper.dll' KeyPath='yes' />
+              <File Id='HelperDLL' Name='Helper.dll' DiskId='1' Source='media\Helper.dll' KeyPath='yes' />
             </Component>
 
             <Component Id='Manual' Guid='4243e7fd-d492-4ab5-a36e-f8cf1aeae502'>
-              <File Id='Manual' Name='Manual.pdf' DiskId='1' Source='Manual.pdf' KeyPath='yes'>
+              <File Id='Manual' Name='Manual.pdf' DiskId='1' Source='media\Manual.pdf' KeyPath='yes'>
                 <Shortcut Id="startmenuManual" Directory="ProgramMenuDir" Name="Instruction Manual" Advertise="yes" />
               </File>
             </Component>
@@ -55,7 +55,7 @@
       <ComponentRef Id='ProgramMenuDir' />
     </Feature>
 
-    <Icon Id="Foobar10.exe" SourceFile="citycorner.exe" />
+    <Icon Id="CityCorner.exe" SourceFile="media\citycorner.exe" />
 
   </Product>
 </Wix>
