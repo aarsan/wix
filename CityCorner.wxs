@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='windows-1252'?>
-<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'
+xmlns:iis="http://schemas.microsoft.com/wix/IIsExtension">
   <Product Name='CityCorner 1.0' Id='ea5f4c51-6ff3-4300-b122-98a8fb95719f' UpgradeCode='2933d82a-5636-425e-828b-0a7b5a6da5df'
     Language='1033' Codepage='1252' Version='1.0.0' Manufacturer='Progger, LLC.'>
 
@@ -47,6 +48,10 @@
 
       <Directory Id="DesktopFolder" Name="Desktop" />
     </Directory>
+    
+    <iis:WebSite Id="SelectedWebSite" Description="citycorner" Directory="INSTALLFOLDER" SiteId="2">
+      <iis:WebAddress Id="AllUnassigned" Port="80" />
+    </iis:WebSite>
 
     <Feature Id='Complete' Level='1'>
       <ComponentRef Id='MainExecutable' />
